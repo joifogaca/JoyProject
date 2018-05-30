@@ -1,0 +1,31 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li>
+    <a routerLink="ddds" >Cadastrar DDD</a>
+  </li>
+  <li>
+    <a routerLink="tarifas ">Tarifa</a>
+  </li>
+</ul>
+<nav>
+  <div class="nav-wrapper blue accent-1 z-depth-4">
+      <div class="left section ">
+            <h6 >Joice Telefonia</h6>
+            <h6>{{nomeTela}}</h6>
+          </div>
+    <ul class="right hide-on-med-and-down">
+      <li>
+        <a [routerLink]="['/ddds']">DDD</a>
+      </li>
+      <li>
+        <a [routerLink]="['/tarifas']">Tarifas</a>
+      </li>
+      <!-- Dropdown Trigger -->
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown1">Cadastro
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

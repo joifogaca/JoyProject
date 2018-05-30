@@ -1,0 +1,29 @@
+<div class="row">
+  <form class="col s10" #cadastro="ngForm" (ngSubmit)="cadastrar()">
+      <h4 class="blue-text text-darken-2">Formulário</h4>
+    <div class="row">
+      <div class="input-field col s3">
+          <i class="material-icons prefix ">code</i>
+        <input type="text" id="codigoArea" name="codigoArea" class="validate" [(ngModel)]="dddNovo.codigoArea" #codigoArea="ngModel" required>
+        <label for="codigoArea">Código de área</label>
+        <div *ngIf="codigoArea.invalid && codigoArea.dirty">
+            <span class="helper-text red-text" >Preenchimento obrigatório!</span>
+          </div>
+      </div>
+      
+      <div class="input-field col s5">
+          <i class="material-icons prefix">filter_hdr</i>
+        <input type="text" id="nomeCidade" name="nomeCidade" #nomeCidade="ngModel" class="validate" [(ngModel)]="dddNovo.nomeCidade" required>
+        <label for="nomeCidade">Cidade</label>
+        <div *ngIf="nomeCidade.invalid && nomeCidade.dirty">
+            <span class="helper-text red-text" >Preenchimento obrigatório!</span>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+    <button type="submit" class="btn blue accent-1 z-depth-4">Enviar</button>
+    <button routerLink="/" class="btn blue accent-1 z-depth-4">Voltar</button>
+    </div>
+    
+  </form>
+</div>
